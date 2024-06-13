@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .wrapper{
+            width: 100vw;
+            height: 100vh;
+            background-image: url(./assest/4121407.jpg);
+            background-position-y: -250px;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 70rem;
+            height: 50rem;
+            background-color: aliceblue;
+            opacity: 80%;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .top
+        {
+            position: absolute;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(7, 7, 7);
+            font-size:60px;
+            top:5rem;
+        }
+
+        
+        .your-head{
+            position: absolute;
+            font-size: 22px;
+            top: 13rem;
+            left: 15rem;
+            padding: 4px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 13rem;
+            border-radius: 20px ;
+            background-color: rgb(194, 236, 255);
+        }
+        /*.your-head:hover{
+            
+            background-color: rgb(152, 237, 247);
+
+            color: black;
+            border-radius: 10px;
+            width: 12rem;
+            justify-content: center;
+            align-items: center;
+        }*/
+
+        .search-head{
+            position: absolute;
+            font-size: 22px;
+            top: 13rem;
+            right: 15rem;
+            padding: 4px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 13rem;
+            border-radius: 20px ;
+            background-color: rgb(194, 236, 255);
+        }
+        /*.search-head:hover{
+            
+            background-color: rgb(152, 237, 247);
+            color: black;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+        }*/
+        .your-weather{
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+        .city{
+            width: 10rem;
+            height: 50px;
+            font-size: 50px;
+            top: -5rem;
+            position: absolute;
+        }
+        .s-city{
+            width: 10rem;
+            height: 50px;
+            font-size: 50px;
+            top: -2rem;
+            left: -5rem;
+            position: absolute;
+        }
+
+        .thunderstrom{
+            width: 10rem;
+            height: 20px;
+            font-size: 20px;
+            top: -1rem;
+            position: absolute;
+        }
+
+        .s-thunderstrom{
+            width: 10rem;
+            height: 20px;
+            font-size: 20px;
+            top: 2rem;
+            left: -5rem;
+
+            position: absolute;
+        }
+        /*.cloud{
+            width: 5rem;
+            height: 80px;
+            background-color: black;
+            top: 3rem;
+            position: absolute;
+        }*/
+        .temprature{
+            width: 10rem;
+            height: 80px;
+            font-size: 50px;
+            top: 3rem;
+            left: -5.5rem;
+            font-style: oblique;
+            position: absolute;
+        }
+        .s-temprature{
+            width: 10rem;
+            height: 80px;
+            font-size: 50px;
+            font-style: oblique; 
+            top: 4rem;
+            left:-5rem;
+            position: absolute;
+        }
+        .more-detail{
+            display: flex;
+            flex-direction: row;
+            width: 55rem;
+            height: 15rem;
+            top: 8rem;
+            position: absolute;
+            justify-content:space-evenly;
+            align-items: center;
+        }
+
+        .s-more-detail{
+            display: flex;
+            flex-direction: row;
+            width: 55rem;
+            height: 15rem;
+            top: 8rem;
+            left:-27.5rem;
+            position: absolute;
+            justify-content:space-evenly;
+            align-items: center;
+            
+        }
+
+        .box{
+            display: flex;
+            width: 13rem;
+            height: 5rem;
+            font-size: 30px;
+            background-color: rgb(221, 221, 221);
+            justify-content: center;
+            align-items:center;
+            
+        }
+
+        .s-box{
+            display: flex;
+            width: 13rem;
+            height: 13rem;
+            font-size: 30px;
+            background-color: rgb(221, 221, 221);
+            justify-content: center;
+            align-items:center;
+        }
+        .search-weather{
+            position: relative;
+        }
+        .searchbar{
+            position: absolute;
+            top:-6rem;
+            left: -10rem;
+            width: 18rem;
+            height: 3rem;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10px;
+            border-radius: 20px ;
+            border: 0;
+        }
+        .searchBtn
+        {
+            border: 0;
+            top: -5.9rem;
+            right: -7.5rem;
+            position: absolute;
+            width: 43px;
+            height: 43px;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            padding-left: 10px;
+            border-radius: 20px ;
+        }
+        .your-weather, .search-weather, .s-more-detail {
+             display: none;
+        }
+
+        .active1, .active2, .detail {
+            display:flex;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+                
+                <!-- heading -->
+                <div class="top">WEATHER APP</div>
+            
+                <!-- Switch -->
+                <button class="your-head">Your Weather</button>
+                <button class="search-head">Search Weather</button>
+                
+                <!-- Your Location -->
+                <div class="your-weather">
+                    <div class="city" current-location></div>
+                    <div class="thunderstrom" current-cloud></div>
+                    <!-- <div class="cloud"></div> -->
+                    <div class="temprature" temp></div>
+                    <div class="more-detail">
+                        <div class="box windspeed" wind></div>
+                        <div class="box humidity" humi></div>
+                        <div class="box clouds" cloud></div>
+                    </div>
+                </div>
+
+                <!-- Search Location -->
+                <div class="search-weather">
+                    <input placeholder="Enter yor location" type="text" class="searchbar">
+                    <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <div class="s-weather">
+                        <div class="s-city" s-current-location></div>
+                        <div class="s-thunderstrom" s-current-cloud></div>
+                        <!-- <div class="cloud"></div> -->
+                        <div class="s-temprature" s-temp></div>
+                        <div class="s-more-detail">
+                            <div class="s-box windspeed" s-wind></div>
+                            <div class="s-box humidity" s-humi></div>
+                            <div class="s-box clouds" s-cloud></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+
+
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/384aef7421.js" crossorigin="anonymous"></script>
+</body>
+</html>
